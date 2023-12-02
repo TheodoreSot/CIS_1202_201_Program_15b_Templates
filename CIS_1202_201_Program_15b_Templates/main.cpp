@@ -1,7 +1,12 @@
+// Theodore Sotirelis
+//CIS 1202 201
+//December 3, 2023
+
 #include <iostream>
 #include <cmath>
 using namespace std;
 
+//templated function taking half of variable
 template <typename T>
 T half(T num)
 {
@@ -9,6 +14,7 @@ T half(T num)
     return halfNum;
 }
 
+//specialized templated function for taking half of int. (Specified in instructions)
 template <>
 int half<int>(int num)
 {
@@ -23,9 +29,9 @@ int main()
     float b=5.0f;
     int c=3;
     
-    cout << half(a) << endl;
-    cout << half(b) << endl;
-    cout << half(c) << endl;
+    cout << half(a) << endl;    // calls general templated function
+    cout << half(b) << endl;    // calls general templated function
+    cout << half(c) << endl;    // calls specialized templated function
 
     return 0;
 }

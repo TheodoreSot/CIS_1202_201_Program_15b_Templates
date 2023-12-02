@@ -9,14 +9,12 @@ T half(T num)
     return halfNum;
 }
 
-//template <typename T>
-int half(int num)
+template <>
+int half<int>(int num)
 {
     int roundedNum;
-    double tempNum=static_cast<double>(num)/2;
-    roundedNum=round(static_cast<double>(tempNum));
+    roundedNum=round((static_cast<double>(num)/2));
     return roundedNum;
-    
 }
 
 int main()
